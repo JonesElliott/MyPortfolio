@@ -1,49 +1,77 @@
-html {
+/* html {
     overflow: auto;
     -ms-overflow-style: none;
-}
+} */
 
 ::-webkit-scrollbar {
-    background: transparent;
-    scrollbar-width: none;
+    /* background: transparent; */
+    /* scrollbar-width: 1px; */
     display: none;
 }
 
-.hide-scrollbar
-{
+.hide-scrollbar {
     overflow: auto;
-    -ms-overflow-style: none; /* IE 11 */
-    scrollbar-width: none; /* Firefox 64 */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
 }
 
 .landing-page {
-    background-image: url(./assets/rainy-road.jpg);
+    background-image: url(./assets/pink-cloud-mountain.jpg);
+    background-color: black;
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
-    position: relative;
-    height: 100vh;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    /* background-position: left top; */
+    /* position: relative; */
+    height: 100vmax;
+    width: 100vw;
+    
 }
 
 .sticky {
     position: fixed;
-    top: 15%;
-    width: 100%;
+    top: 25%;
+    /* width: 100%; */
     z-index: 1;
 }
 
+a {
+    color: black;
+}
+
+a:link {
+    text-decoration: black;
+}
+
+/* a:visited {
+    text-decoration: black;
+  }
+
+a:hover {
+    text-decoration: black;
+}
+a:active {
+    text-decoration: black;
+} */
 
 header {
-    color: white;
+    /* color: white; */
     font-size: larger;
+    /* text-shadow: 2px 2px 8px white; */
+    border-radius: 10px;
 }
 
 .nav-ul {
     list-style: none;
     float: left;
     padding-top: 5%;
-    padding-left: 5%;
+    padding-left: 100px;
 }
 
 .nav-li {
@@ -55,8 +83,12 @@ header {
 .section-name {
     text-align: center;
     padding-top: 20%;
-    color: white;
+    width: fit-content;
+    /* color: white; */
     font-size: x-large;
+    /* text-shadow: 2px 2px black; */
+    margin: auto;
+    padding-bottom: 0;
 }
 
 .name-h {
@@ -68,27 +100,26 @@ header {
 }
 
 .project-container {
-    /* background-color: grey; */
-    /* background-color: black; */
-    /* -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
-    padding: 0;
-    margin: 0;
+    text-align: center;
+    /* margin-bottom: 400px; */
+    z-index: 1;
 }
 
-.div-break {
-    padding-top: 500px;
-    /* margin-top: 35%; */
-    /* border: 1px solid white; */
+.break-line {
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.title-section {
+    margin-bottom: 100px;
 }
 
 .section-project {
-    /* color: white; */
-    /* margin-top: 5%; */
-    /* background-color: grey; */
-    text-align: center;
+
 }
 
 .div-project {
-
+    margin-bottom: 100px;
 }
