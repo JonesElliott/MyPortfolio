@@ -37,7 +37,7 @@ body {
 .sticky {
     position: fixed;
     top: 25%;
-    /* width: 100%; */
+    width: 100%;
     z-index: 1;
 }
 
@@ -70,14 +70,26 @@ header {
 .nav-ul {
     list-style: none;
     float: left;
-    padding-top: 5%;
+    padding-top: 2.5%;
     padding-left: 100px;
 }
 
-.nav-li {
+.nav-li-page {
     /* display: inline; */
     margin: 75%;
     margin-left: 20px;
+}
+
+.nav-ul-links {
+    font-size: 40px;
+    list-style: none;
+    float: right;
+    padding-right: 100px;
+}
+
+.nav-li-links {
+    margin: 75%;
+    margin-right: 20px;
 }
 
 .section-name {
@@ -122,4 +134,8 @@ header {
 
 .div-project {
     margin-bottom: 100px;
+}
+
+@media {
+    
 }
