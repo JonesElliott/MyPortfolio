@@ -3,8 +3,6 @@ html {
 }
 
 ::-webkit-scrollbar {
-    /* background: transparent; */
-    /* scrollbar-width: 1px; */
     display: none;
 }
 
@@ -26,11 +24,8 @@ body {
     background-position: center;
     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    /* background-position: left top; */
-    /* position: relative; */
     height: 100vmax;
     width: 100vw;
-    
 }
 
 .sticky-left {
@@ -42,10 +37,8 @@ body {
 
 .sticky-right {
     position: fixed;
-    /* float: right; */
     margin-left: 85%;
     top: 25%;
-    /* width: 10%; */
     z-index: 1;
 }
 
@@ -57,21 +50,15 @@ a:link {
     text-decoration: black;
 }
 
-/* a:visited {
-    text-decoration: black;
-  }
-
-a:hover {
-    text-decoration: black;
-}
+a:visited,
+a:hover,
 a:active {
-    text-decoration: black;
-} */
+  text-decoration: none;
+  color: black;
+}
 
 header {
-    /* color: white; */
     font-size: larger;
-    /* text-shadow: 2px 2px 8px white; */
     border-radius: 10px;
 }
 
@@ -83,7 +70,6 @@ header {
 }
 
 .nav-li-page {
-    /* display: inline; */
     margin: 75%;
     margin-left: 20px;
 }
@@ -92,23 +78,17 @@ header {
     font-size: 40px;
     list-style: none;
     padding-top: 50%;
-    /* margin: 75%; */
-    /* float: right; */
-    /* padding-right: 100px; */
 }
 
 .nav-li-links {
     margin: 75%;
-    /* margin-right: 20px; */
 }
 
 .section-name {
     text-align: center;
     padding-top: 20%;
     width: fit-content;
-    /* color: white; */
     font-size: x-large;
-    /* text-shadow: 2px 2px black; */
     margin: auto;
     padding-bottom: 0;
 }
@@ -123,7 +103,6 @@ header {
 
 .project-container {
     text-align: center;
-    /* margin-bottom: 400px; */
     z-index: 1;
     margin-bottom: 10%;
 }
