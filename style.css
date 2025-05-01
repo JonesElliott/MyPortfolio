@@ -2,18 +2,14 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .hide-scrollbar {
-    overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
 body {
     margin: 0;
+    padding-top: 60px; /* match nav height */
 }
 
 .landing-page {
@@ -28,60 +24,14 @@ body {
     width: 100vw;
 }
 
-.sticky-left {
-    position: fixed;
-    top: 25%;
-    width: 10%;
-    z-index: 1;
-}
-
-.sticky-right {
-    position: fixed;
-    margin-left: 85%;
-    top: 25%;
-    z-index: 1;
-}
-
 a {
+    text-decoration: none;
     color: black;
-}
-
-a:link {
-    text-decoration: black;
-}
-
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: black;
-}
+  }
 
 header {
     font-size: larger;
     border-radius: 10px;
-}
-
-.nav-ul {
-    list-style: none;
-    float: left;
-    padding-top: 5%;
-    padding-left: 150px;
-}
-
-.nav-li-page {
-    margin: 75%;
-    margin-left: 20px;
-}
-
-.nav-ul-links {
-    font-size: 40px;
-    list-style: none;
-    padding-top: 50%;
-}
-
-.nav-li-links {
-    margin: 75%;
 }
 
 .section-name {
@@ -91,14 +41,6 @@ header {
     font-size: x-large;
     margin: auto;
     padding-bottom: 0;
-}
-
-.name-h {
-
-}
-
-.name-p {
-    
 }
 
 .project-container {
@@ -116,10 +58,6 @@ header {
 
 .title-section {
     margin-bottom: 100px;
-}
-
-.section-project {
-
 }
 
 .div-project {
@@ -155,8 +93,81 @@ header {
 	top:1px;
 }
 
-        
+@media (max-width: 768px) {
+    /* Constrain the nav content inside the fixed top-nav */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;  /* Prevents overflow on small screens */
+    overflow-x: hidden;  /* Hide horizontal overflow */
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Ensure nav items wrap or fit on small screens */
+  .nav-ul {
+    display: flex;
+    flex-wrap: wrap;        /* Allows items to wrap to the next line */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent nav items from stretching too wide */
+  .nav-li-page, .nav-li-links {
+    margin: 0 5px;
+    white-space: nowrap;     /* Prevents text from breaking mid-word */
+    font-size: 14px;          /* Shrink font slightly if needed */
+  }
+  
+  /* Adjust section spacing below header */
+  .landing-page {
+    padding-top: 60px;
+    height: 100vh;
+  }
+  }
 
-@media {
-    
-}
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-links,
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a,
+  .social-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover,
+  .social-links a:hover {
+    color: #007acc;
+  }
